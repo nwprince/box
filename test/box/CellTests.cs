@@ -1,13 +1,13 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using Cell;
-namespace CellTest
+namespace box.Tests
 {
-    [TestClass]
-    public class CellTest
+    [TestClass()]
+    public class CellTests
     {
         #region "Clear"
-        [TestMethod]
+        [TestMethod()]
         public void TestBoolClear()
         {
             Cell<bool> objTestCell = new Cell<bool>(true);
@@ -19,7 +19,7 @@ namespace CellTest
             Assert.AreEqual(false, objTestCell.Data);
         }
 
-        [TestMethod]
+        [TestMethod()]
         public void TestDateClear()
         {
             Cell<DateTime> objTestCell = new Cell<DateTime>(new DateTime(2021, 11, 21));
@@ -32,7 +32,7 @@ namespace CellTest
             Assert.AreEqual(defaultDate, objTestCell.Data);
         }
 
-        [TestMethod]
+        [TestMethod()]
         public void TestDecimalClear()
         {
             Cell<decimal> objTestCell = new Cell<decimal>(12.00M);
@@ -45,7 +45,7 @@ namespace CellTest
             Assert.AreEqual(0.0M, objTestCell.Data);
         }
 
-        [TestMethod]
+        [TestMethod()]
         public void TestDoubleClear()
         {
             Cell<double> objTestCell = new Cell<double>(12.00D);
@@ -58,7 +58,7 @@ namespace CellTest
             Assert.AreEqual(0.0D, objTestCell.Data);
         }
 
-        [TestMethod]
+        [TestMethod()]
         public void TestFloatClear()
         {
             Cell<float> objTestCell = new Cell<float>(12.00F);
@@ -71,7 +71,7 @@ namespace CellTest
             Assert.AreEqual(0.0F, objTestCell.Data);
         }
 
-        [TestMethod]
+        [TestMethod()]
         public void TestIntClear()
         {
             Cell<int> objTestCell = new Cell<int>(12);
@@ -85,7 +85,7 @@ namespace CellTest
             Assert.AreEqual(0, objTestCell.Data);
         }
 
-        [TestMethod]
+        [TestMethod()]
         public void TestLongClear()
         {
             Cell<long> objTestCell = new Cell<long>(12L);
@@ -98,7 +98,7 @@ namespace CellTest
             Assert.AreEqual(0L, objTestCell.Data);
         }
 
-        [TestMethod]
+        [TestMethod()]
         public void TestShortClear()
         {
             Cell<short> objTestCell = new Cell<short>(12);
@@ -111,7 +111,7 @@ namespace CellTest
             Assert.AreEqual(0, objTestCell.Data);
         }
 
-        [TestMethod]
+        [TestMethod()]
         public void TestStringClear()
         {
             Cell<string> objTestCell = new Cell<string>("test");
@@ -127,7 +127,7 @@ namespace CellTest
         #endregion
 
         #region "Set"
-        [TestMethod]
+        [TestMethod()]
         public void TestSetBoolValue()
         {
             Cell<bool> objTestCell = new Cell<bool>();
@@ -136,7 +136,7 @@ namespace CellTest
         }
 
 
-        [TestMethod]
+        [TestMethod()]
         public void TestSetDecimalValue()
         {
             Cell<decimal> objTestCell = new Cell<decimal>();
@@ -144,7 +144,7 @@ namespace CellTest
             Assert.AreEqual(10.25M, objTestCell.Data);
         }
 
-        [TestMethod]
+        [TestMethod()]
         public void TestSetDoubleValue()
         {
             Cell<double> objTestCell = new Cell<double>();
@@ -152,7 +152,7 @@ namespace CellTest
             Assert.AreEqual(1000000000000000.25D, objTestCell.Data);
         }
 
-        [TestMethod]
+        [TestMethod()]
         public void TestSetFloatValue()
         {
             Cell<float> objTestCell = new Cell<float>();
@@ -160,7 +160,7 @@ namespace CellTest
             Assert.AreEqual(1000000000000000.25F, objTestCell.Data);
         }
 
-        [TestMethod]
+        [TestMethod()]
         public void TestSetIntValue()
         {
             Cell<int> objTestCell = new Cell<int>();
@@ -168,7 +168,7 @@ namespace CellTest
             Assert.AreEqual(16, objTestCell.Data);
         }
 
-        [TestMethod]
+        [TestMethod()]
         public void TestSetLongValue()
         {
             Cell<long> objTestCell = new Cell<long>();
@@ -176,7 +176,7 @@ namespace CellTest
             Assert.AreEqual(125L, objTestCell.Data);
         }
 
-        [TestMethod]
+        [TestMethod()]
         public void TestSetShortValue()
         {
             Cell<short> objTestCell = new Cell<short>();
@@ -184,7 +184,7 @@ namespace CellTest
             Assert.AreEqual(16, objTestCell.Data);
         }
 
-        [TestMethod]
+        [TestMethod()]
         public void TestSetStringValue()
         {
             Cell<string> objTestCell = new Cell<string>();

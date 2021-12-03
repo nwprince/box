@@ -1,13 +1,62 @@
 ﻿using Cell;
 using Line;
 
-namespace Box
+namespace box
 {
     public class Box
     {
         #region "Columns"
+        public void AddBooleanColumn(string pstringColumnName)
+        {
+            AddColumn<Boolean>(pstringColumnName);
+        }
 
-        public void AddColumn<T>(string pstringColumnName) 
+        public void AddCustomTypeColumn<T>(string pstringColumnName)
+        {
+            AddColumn<T>(pstringColumnName);
+        }
+
+        public void AddDateOnlyColumn(string pstringColumnName)
+        {
+            AddColumn<DateOnly>(pstringColumnName);
+        }
+
+        public void AddDateTimeColumn(string pstringColumnName)
+        {
+            AddColumn<DateTime>(pstringColumnName);
+        }
+
+        public void AddDecimalColumn(string pstringColumnName)
+        {
+            AddColumn<Decimal>(pstringColumnName);
+        }
+
+        public void AddDoubleColumn(string pstringColumnName)
+        {
+            AddColumn<Double>(pstringColumnName);
+        }
+
+        public void AddFloatColumn(string pstringColumnName)
+        {
+            AddColumn<float>(pstringColumnName);
+        }
+
+        public void AddIntColumn(string pstringColumnName)
+        {
+            AddColumn<int>(pstringColumnName);
+        }
+
+        public void AddLongColumn(string pstringColumnName)
+        {
+            AddColumn<string>(pstringColumnName);
+        }
+
+        public void AddStringColumn(string pstringColumnName)
+        {
+            AddColumn<String>(pstringColumnName);
+        }
+
+        private void AddColumn<T>(string pstringColumnName) 
         {
             GuardData();
             _data.AddCell(new Line<object>(pstringColumnName));
@@ -20,7 +69,7 @@ namespace Box
             }
         }
 
-        public void AddColumn<T>(string pstringColumnName, T pobjectStartingValue)
+        private void AddColumn<T>(string pstringColumnName, T pobjectStartingValue)
         {
             GuardData();
             _data.AddCell(new Line<object>(pstringColumnName));
@@ -34,6 +83,7 @@ namespace Box
             }
         }
 
+
         public int ColumnCount()
         {
             if (_data  == null)
@@ -43,6 +93,8 @@ namespace Box
 
             return _data.CellCount();
         }
+
+
         #endregion
 
         #region "Data"

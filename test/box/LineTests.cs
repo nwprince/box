@@ -1,13 +1,13 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
-using Line; 
+using Line;
 
 namespace LineTest
 {
     [TestClass]
-    public class LineTest
+    public class LineTests
     {
-        [TestMethod]
+        [TestMethod()]
         public void TestNewDefaultBoolLine()
         {
             Line<bool> testLine = new Line<bool>("pbooleanTestLine");
@@ -20,7 +20,7 @@ namespace LineTest
             Assert.AreEqual(1, testLine.CellCount());
         }
 
-        [TestMethod]
+        [TestMethod()]
         public void TestNewMultiDefaultBoolLine()
         {
             Line<bool> testLine = new Line<bool>("pbooleanTestLine");
@@ -36,7 +36,7 @@ namespace LineTest
             Assert.AreEqual(2, testLine.CellCount());
         }
 
-        [TestMethod]
+        [TestMethod()]
         public void TestNewValuedBoolLine()
         {
             Line<bool> testLine = new Line<bool>("pbooleanTestLine");
@@ -49,7 +49,7 @@ namespace LineTest
             Assert.AreEqual(true, testLine.CellData());
         }
 
-        [TestMethod]
+        [TestMethod()]
         public void TestNewMultiValuedBoolLine()
         {
             Line<bool> testLine = new Line<bool>("pbooleanTestLine");
@@ -65,7 +65,7 @@ namespace LineTest
             Assert.AreEqual(false, testLine.CellData());
         }
 
-        [TestMethod]
+        [TestMethod()]
         public void TestNewDefaultDateTimeLine()
         {
             Line<DateTime> testLine = new Line<DateTime>("pdatetimeTestLine");
@@ -78,7 +78,7 @@ namespace LineTest
             Assert.AreEqual(1, testLine.CellCount());
         }
 
-        [TestMethod]
+        [TestMethod()]
         public void TestNewMultiDefaultDateTimeLine()
         {
             Line<DateTime> testLine = new Line<DateTime>("pdatetimeTestLine");
@@ -94,7 +94,7 @@ namespace LineTest
             Assert.AreEqual(2, testLine.CellCount());
         }
 
-        [TestMethod]
+        [TestMethod()]
         public void TestNewValuedDateTimeLine()
         {
             Line<DateTime> testLine = new Line<DateTime>("pdatetimeTestLine");
@@ -107,7 +107,7 @@ namespace LineTest
             Assert.AreEqual(new DateTime(2021, 11, 21), testLine.CellData());
         }
 
-        [TestMethod]
+        [TestMethod()]
         public void TestNewMultiValuedDateTimeLine()
         {
             Line<DateTime> testLine = new Line<DateTime>("pdatetimeTestLine");
@@ -123,7 +123,7 @@ namespace LineTest
             Assert.AreEqual(new DateTime(2021, 11, 22), testLine.CellData());
         }
 
-        [TestMethod]
+        [TestMethod()]
         public void TestNewMultiDefaultDecimalLine()
         {
             Line<decimal> testLine = new Line<decimal>("pdecimalTestLine");
@@ -139,7 +139,7 @@ namespace LineTest
             Assert.AreEqual(2, testLine.CellCount());
         }
 
-        [TestMethod]
+        [TestMethod()]
         public void TestNewValuedDecimalLine()
         {
             Line<decimal> testLine = new Line<decimal>("pdecimalTestLine");
@@ -152,7 +152,7 @@ namespace LineTest
             Assert.AreEqual(12.00M, testLine.CellData());
         }
 
-        [TestMethod]
+        [TestMethod()]
         public void TestNewMultiValuedDecimalLine()
         {
             Line<decimal> testLine = new Line<decimal>("pdecimalTestLine");
@@ -168,7 +168,7 @@ namespace LineTest
             Assert.AreEqual(13.00M, testLine.CellData());
         }
 
-        [TestMethod]
+        [TestMethod()]
         public void TestNewMultiDefaultDoubleLine()
         {
             Line<Double> testLine = new Line<Double>("pdoubleTestLine");
@@ -184,7 +184,7 @@ namespace LineTest
             Assert.AreEqual(2, testLine.CellCount());
         }
 
-        [TestMethod]
+        [TestMethod()]
         public void TestNewValuedDoubleLine()
         {
             Line<Double> testLine = new Line<Double>("pdoubleTestLine");
@@ -197,7 +197,7 @@ namespace LineTest
             Assert.AreEqual(12.00D, testLine.CellData());
         }
 
-        [TestMethod]
+        [TestMethod()]
         public void TestNewMultiValuedDoubleLine()
         {
             Line<Double> testLine = new Line<Double>("pdoubleTestLine");
@@ -213,7 +213,7 @@ namespace LineTest
             Assert.AreEqual(13.00D, testLine.CellData());
         }
 
-        [TestMethod]
+        [TestMethod()]
         public void TestNewMultiDefaultFloatLine()
         {
             Line<float> testLine = new Line<float>("pfloatTestLine");
@@ -229,7 +229,7 @@ namespace LineTest
             Assert.AreEqual(2, testLine.CellCount());
         }
 
-        [TestMethod]
+        [TestMethod()]
         public void TestNewValuedFloatLine()
         {
             Line<float> testLine = new Line<float>("pfloatTestLine");
@@ -242,7 +242,7 @@ namespace LineTest
             Assert.AreEqual(12.00F, testLine.CellData());
         }
 
-        [TestMethod]
+        [TestMethod()]
         public void TestNewMultiValuedFloatLine()
         {
             Line<float> testLine = new Line<float>("pfloatTestLine");
@@ -258,7 +258,7 @@ namespace LineTest
             Assert.AreEqual(13.00F, testLine.CellData());
         }
 
-        [TestMethod]
+        [TestMethod()]
         public void TestNewMultiDefaultIntLine()
         {
             Line<int> testLine = new Line<int>("pintTestLine");
@@ -274,7 +274,7 @@ namespace LineTest
             Assert.AreEqual(2, testLine.CellCount());
         }
 
-        [TestMethod]
+        [TestMethod()]
         public void TestNewValuedIntLine()
         {
             Line<int> testLine = new Line<int>("pintTestLine");
@@ -287,7 +287,7 @@ namespace LineTest
             Assert.AreEqual(12, testLine.CellData());
         }
 
-        [TestMethod]
+        [TestMethod()]
         public void TestNewMultiValuedIntLine()
         {
             Line<int> testLine = new Line<int>("pintTestLine");
@@ -303,7 +303,7 @@ namespace LineTest
             Assert.AreEqual(13, testLine.CellData());
         }
 
-        [TestMethod]
+        [TestMethod()]
         public void TestNewMultiDefaultLongLine()
         {
             Line<long> testLine = new Line<long>("plongTestLine");
@@ -319,7 +319,7 @@ namespace LineTest
             Assert.AreEqual(2, testLine.CellCount());
         }
 
-        [TestMethod]
+        [TestMethod()]
         public void TestNewValuedLongLine()
         {
             Line<long> testLine = new Line<long>("plongTestLine");
@@ -332,7 +332,7 @@ namespace LineTest
             Assert.AreEqual(12L, testLine.CellData());
         }
 
-        [TestMethod]
+        [TestMethod()]
         public void TestNewMultiValuedLongLine()
         {
             Line<long> testLine = new Line<long>("plongTestLine");
@@ -348,7 +348,7 @@ namespace LineTest
             Assert.AreEqual(13L, testLine.CellData());
         }
 
-        [TestMethod]
+        [TestMethod()]
         public void TestNewMultiDefaultShortLine()
         {
             Line<short> testLine = new Line<short>("pshortTestLine");
@@ -364,7 +364,7 @@ namespace LineTest
             Assert.AreEqual(2, testLine.CellCount());
         }
 
-        [TestMethod]
+        [TestMethod()]
         public void TestNewValuedShortLine()
         {
             Line<short> testLine = new Line<short>("pshortTestLine");
@@ -377,7 +377,7 @@ namespace LineTest
             Assert.AreEqual(12, testLine.CellData());
         }
 
-        [TestMethod]
+        [TestMethod()]
         public void TestNewMultiValuedShortLine()
         {
             Line<short> testLine = new Line<short>("pshortTestLine");
@@ -393,7 +393,7 @@ namespace LineTest
             Assert.AreEqual(13.00M, testLine.CellData());
         }
 
-        [TestMethod]
+        [TestMethod()]
         public void TestNewMultiDefaultStringLine()
         {
             Line<string> testLine = new Line<string>("pstringTestLine");
@@ -409,7 +409,7 @@ namespace LineTest
             Assert.AreEqual(2, testLine.CellCount());
         }
 
-        [TestMethod]
+        [TestMethod()]
         public void TestNewValuedStringLine()
         {
             Line<string> testLine = new Line<string>("pstringTestLine");
@@ -422,7 +422,7 @@ namespace LineTest
             Assert.AreEqual("test", testLine.CellData());
         }
 
-        [TestMethod]
+        [TestMethod()]
         public void TestNewMultiValuedStringLine()
         {
             Line<string> testLine = new Line<string>("pstringTestLine");
@@ -438,7 +438,7 @@ namespace LineTest
             Assert.AreEqual("testing", testLine.CellData());
         }
 
-        [TestMethod]
+        [TestMethod()]
         public void TestCellCount()
         {
             Line<bool> testLine = new Line<bool>("pbooleanTestLine");
@@ -454,7 +454,7 @@ namespace LineTest
             }
         }
 
-        [TestMethod]
+        [TestMethod()]
         public void TestAddMultipleCells()
         {
             Line<int> testLine = new Line<int>("pintTestLine");
@@ -467,7 +467,7 @@ namespace LineTest
             Assert.AreEqual(500, testLine.CellCount());
         }
 
-        [TestMethod]
+        [TestMethod()]
         public void TestAddMultipleValuedCells()
         {
             Line<int> testLine = new Line<int>("pintTestLine");
