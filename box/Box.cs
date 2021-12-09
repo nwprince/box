@@ -94,7 +94,29 @@ namespace box
             return _data.CellCount();
         }
 
+        public bool ColumnExists(string pstrColumnName)
+        {
+            if (_data == null)
+            {
+                return false;
+            }
+        
+            if (ColumnCount() == 0)
+            {
+                return false;
+            }
+        
+            foreach (Cell<Line<object>> row in _data.AllCells())
+            {
+                if (row.Data.MyName() == pstrColumnName)
+                {
+                    return true;
+                }
+            
+            }
 
+            return false;
+        }
         #endregion
 
         #region "Data"

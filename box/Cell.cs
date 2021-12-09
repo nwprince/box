@@ -1,4 +1,6 @@
-﻿namespace Cell
+﻿using System.Collections;
+
+namespace Cell
 {
     public class Cell<T>
     {

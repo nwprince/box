@@ -18,5 +18,18 @@ namespace box.Tests
             box.AddIntColumn("pintTestColumn");
             Assert.AreEqual(1, box.ColumnCount());
         }
+
+        [TestMethod()]
+        public void ContainsColumnTest()
+        {
+            Box testbox = new Box();
+            if (testbox == null)
+            {
+                throw new Exception("Failed to create box object");
+            }
+
+            testbox.AddBooleanColumn("pbooleanTestColumn");
+            Assert.IsTrue(testbox.ColumnExists("pbooleanTestColumn"));
+        }
     }
 }

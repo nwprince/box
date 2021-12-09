@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using Cell;
 namespace Line
 {
@@ -6,13 +7,15 @@ namespace Line
     {
         private int _focusedCell;
         private string _name { get; set; }
+        //int = index
+        //Cell = data point
         private readonly Dictionary<int, Cell<T>> _cells;
         private readonly Dictionary<Cell<T>, int> _cellIndices;
         public Line(string pstringLineName)
         {
             _name = pstringLineName;
             _focusedCell = -1;
-            _cells = new Dictionary<int,Cell<T>>();
+            _cells = new Dictionary<int, Cell<T>>();
             _cellIndices = new Dictionary<Cell<T>, int>();
         }
 
@@ -32,7 +35,7 @@ namespace Line
             FocusCell(intNewCellIndex);
         }
 
-        public void AddMultipleCells(int pintNumberOfCellsToAdd, 
+        public void AddMultipleCells(int pintNumberOfCellsToAdd,
                                      Boolean pbooleanFocusLast = true)
         {
             int intNewCellIndex = NewCellIndex();
@@ -48,8 +51,8 @@ namespace Line
             }
         }
 
-        public void AddMultipleCells(int pintNumberOfCellsToAdd, 
-                                     T pobjectStartingValue, 
+        public void AddMultipleCells(int pintNumberOfCellsToAdd,
+                                     T pobjectStartingValue,
                                      Boolean pbooleanFocusLast = true)
         {
             int intNewCellIndex = NewCellIndex();
@@ -65,6 +68,7 @@ namespace Line
             }
         }
 
+
         public int CellCount()
         {
             return _cells.Count;
@@ -76,13 +80,18 @@ namespace Line
             {
                 throw new Exception("Line contains no data.");
             }
-            
+
             if (_focusedCell == -1)
             {
                 throw new Exception("Unfocused cell. Cannot determine cell to read value from.");
             }
 
             return _cells[_focusedCell].Data;
+        }
+
+        public IEnumerable<Cell<T>> AllCells()
+        {
+            return _cells.Values;
         }
 
         private Boolean Empty()
@@ -118,6 +127,11 @@ namespace Line
         public bool IsLastCell()
         {
             return FocusedCell() == CellCount();
+        }
+
+        public string MyName()
+        {
+            return _name;
         }
 
         public int NewCellIndex()

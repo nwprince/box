@@ -1,12 +1,35 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using Line;
+using Cell;
 
 namespace LineTest
 {
     [TestClass]
     public class LineTests
     {
+        [TestMethod()]
+        public void TestAllCells()
+        {
+            Line<int> testLine = new Line<int>("pintTestColumn");
+            testLine.AddCell(1);
+            testLine.AddCell(2);
+            bool boolFound1 = false;
+            bool boolFound2 = false;
+            foreach (Cell<int> cell in testLine.AllCells())
+            {
+                if (cell.Data == 1)
+                {
+                    boolFound1 = true;
+                } else if (cell.Data == 2)
+                {
+                    boolFound2 = true;
+                }
+            }
+
+            Assert.IsTrue(boolFound2 && boolFound1);
+        }
+
         [TestMethod()]
         public void TestNewDefaultBoolLine()
         {
